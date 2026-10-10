@@ -47,7 +47,6 @@ static bool tokenize(const string &line, vector<Tok> &toks, string &err) {
       toks.push_back(Tok{SYMBOL, string(1, c)});
       i++;
     } else if (c == '\'') {
-      size_t start = i;
       i++;
       string val = "";
       bool closed = false;
@@ -67,13 +66,11 @@ static bool tokenize(const string &line, vector<Tok> &toks, string &err) {
         }
       }
       if (!closed) {
-        err = "unterminated string literal";
+        err = "unterminated string";
         return false;
       }
       toks.push_back(Tok{STRING, val});
-    }
-    else if (c == '"') {
-      size_t start = i;
+    } else if (c == '"') {
       i++;
       string val = "";
       bool closed = false;
@@ -93,20 +90,26 @@ static bool tokenize(const string &line, vector<Tok> &toks, string &err) {
         }
       }
       if (!closed) {
-        err = "unterminated quoted identifier";
+        err = "unterminated identifier";
         return false;
       }
       toks.push_back(Tok{IDENTIFIER, val});
-    }
-    else if (is_digit(c)) {
-      string num = "";
-      while (i < n && is_digit(line[i])) {
-        num += line[i];
+    } else if (is_digit(c)) {
+      string token_str = "";
+      bool has_alpha = false;
+      while (i < n && (is_digit(line[i]) || is_alpha(line[i]))) {
+        if (is_alpha(line[i])) {
+          has_alpha = true;
+        }
+        token_str += line[i];
         i++;
       }
-      toks.push_back(Tok{NUMBER, num});
-    }
-    else if (is_alpha(c)) {
+      if (has_alpha) {
+        err = "malformed number: " + token_str;
+        return false;
+      }
+      toks.push_back(Tok{NUMBER, token_str});
+    } else if (is_alpha(c)) {
       string word = "";
       while (i < n && (is_alpha(line[i]) || is_digit(line[i]))) {
         word += line[i];
@@ -118,8 +121,7 @@ static bool tokenize(const string &line, vector<Tok> &toks, string &err) {
       } else {
         toks.push_back(Tok{IDENTIFIER, word});
       }
-    }
-    else {
+    } else {
       if (i + 1 < n) {
         string op2 = line.substr(i, 2);
         if (op2 == ">=" || op2 == "<=" || op2 == "<>" || op2 == "!=") {
@@ -128,7 +130,7 @@ static bool tokenize(const string &line, vector<Tok> &toks, string &err) {
           continue;
         }
       }
-      if (string("+-*/=<>!").find(c) != string::npos) {
+      if (string("+-*/=<>").find(c) != string::npos) {
         toks.push_back(Tok{OPERATOR, string(1, c)});
         i++;
       } else {
