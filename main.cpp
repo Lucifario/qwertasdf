@@ -41,15 +41,100 @@ static bool tokenize(const string &line, vector<Tok> &toks, string &err) {
     char c = line[i];
     if (c == ' ' || c == '\t' || c == '\r') {
       i++;
+    } else if (c == '-' && i + 1 < n && line[i + 1] == '-') {
+      break;
     } else if (string("(),;").find(c) != string::npos) {
       toks.push_back(Tok{SYMBOL, string(1, c)});
       i++;
-    } else {
-      // TODO: comments (-- to end of line), 'strings' and "quoted identifiers" with a doubled
-      // quote as an escape, numbers (and the malformed ones), words (keyword or identifier),
-      // and operators (two-character ones first). Anything else is an error.
-      err = string("unexpected character: ") + c;
-      return false;
+    } else if (c == '\'') {
+      size_t start = i;
+      i++;
+      string val = "";
+      bool closed = false;
+      while (i < n) {
+        if (line[i] == '\'') {
+          if (i + 1 < n && line[i + 1] == '\'') {
+            val += '\'';
+            i += 2;
+          } else {
+            closed = true;
+            i++;
+            break;
+          }
+        } else {
+          val += line[i];
+          i++;
+        }
+      }
+      if (!closed) {
+        err = "unterminated string literal";
+        return false;
+      }
+      toks.push_back(Tok{STRING, val});
+    }
+    else if (c == '"') {
+      size_t start = i;
+      i++;
+      string val = "";
+      bool closed = false;
+      while (i < n) {
+        if (line[i] == '"') {
+          if (i + 1 < n && line[i + 1] == '"') {
+            val += '"';
+            i += 2;
+          } else {
+            closed = true;
+            i++;
+            break;
+          }
+        } else {
+          val += line[i];
+          i++;
+        }
+      }
+      if (!closed) {
+        err = "unterminated quoted identifier";
+        return false;
+      }
+      toks.push_back(Tok{IDENTIFIER, val});
+    }
+    else if (is_digit(c)) {
+      string num = "";
+      while (i < n && is_digit(line[i])) {
+        num += line[i];
+        i++;
+      }
+      toks.push_back(Tok{NUMBER, num});
+    }
+    else if (is_alpha(c)) {
+      string word = "";
+      while (i < n && (is_alpha(line[i]) || is_digit(line[i]))) {
+        word += line[i];
+        i++;
+      }
+      string upper_word = upper(word);
+      if (KEYWORDS.find(upper_word) != KEYWORDS.end()) {
+        toks.push_back(Tok{KEYWORD, upper_word});
+      } else {
+        toks.push_back(Tok{IDENTIFIER, word});
+      }
+    }
+    else {
+      if (i + 1 < n) {
+        string op2 = line.substr(i, 2);
+        if (op2 == ">=" || op2 == "<=" || op2 == "<>" || op2 == "!=") {
+          toks.push_back(Tok{OPERATOR, op2});
+          i += 2;
+          continue;
+        }
+      }
+      if (string("+-*/=<>!").find(c) != string::npos) {
+        toks.push_back(Tok{OPERATOR, string(1, c)});
+        i++;
+      } else {
+        err = string("unexpected character: ") + c;
+        return false;
+      }
     }
   }
   return true;
