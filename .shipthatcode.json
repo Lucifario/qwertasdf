@@ -1,0 +1,146 @@
+{
+  "course": "build-database",
+  "language": "cpp",
+  "language_id": 1054,
+  "entrypoint": "main.cpp",
+  "version": 1,
+  "content_hash": "7797882bba8378f5",
+  "lessons": [
+    {
+      "slug": "sql-tokenizer",
+      "tests_hash": "a818844fca35"
+    },
+    {
+      "slug": "create-table",
+      "tests_hash": "34051b1786c4"
+    },
+    {
+      "slug": "insert-into",
+      "tests_hash": "aeac7b39f456"
+    },
+    {
+      "slug": "select-where",
+      "tests_hash": "a56b7e60da2e"
+    },
+    {
+      "slug": "row-storage",
+      "tests_hash": "cb9ca9cf46c9"
+    },
+    {
+      "slug": "table-scan",
+      "tests_hash": "1a7c5ce6d54f"
+    },
+    {
+      "slug": "where-eval",
+      "tests_hash": "b852df8b92dd"
+    },
+    {
+      "slug": "update-delete",
+      "tests_hash": "9876ea32e3f6"
+    },
+    {
+      "slug": "binary-search",
+      "tests_hash": "a9008759d5e8"
+    },
+    {
+      "slug": "btree-nodes",
+      "tests_hash": "76028f495523"
+    },
+    {
+      "slug": "btree-search",
+      "tests_hash": "10c5e53bd69b"
+    },
+    {
+      "slug": "btree-insert",
+      "tests_hash": "1f92584154e1"
+    },
+    {
+      "slug": "btree-delete",
+      "tests_hash": "69f8eeb97ba5"
+    },
+    {
+      "slug": "slotted-pages",
+      "tests_hash": "1e01f5e9c488"
+    },
+    {
+      "slug": "page-cache",
+      "tests_hash": "6d4d5b0c0556"
+    },
+    {
+      "slug": "overflow-pages",
+      "tests_hash": "7526ca30d494"
+    },
+    {
+      "slug": "disk-serialization",
+      "tests_hash": "801ca6d98580"
+    },
+    {
+      "slug": "wal-basics",
+      "tests_hash": "93fd88e96b87"
+    },
+    {
+      "slug": "crash-recovery",
+      "tests_hash": "26b4d4a40d9b"
+    },
+    {
+      "slug": "checkpointing",
+      "tests_hash": "f9a054cb82b0"
+    },
+    {
+      "slug": "fsync-durability",
+      "tests_hash": "1305ef712314"
+    },
+    {
+      "slug": "begin-commit-rollback",
+      "tests_hash": "dcff07399c71"
+    },
+    {
+      "slug": "isolation",
+      "tests_hash": "e6e9bd3dc59d"
+    },
+    {
+      "slug": "atomicity",
+      "tests_hash": "50ecc9d57e30"
+    },
+    {
+      "slug": "locking",
+      "tests_hash": "e3f6608419bd"
+    },
+    {
+      "slug": "mvcc-version-chains",
+      "tests_hash": "ede661cfaf29"
+    },
+    {
+      "slug": "scan-vs-index",
+      "tests_hash": "48c6595cd4c2"
+    },
+    {
+      "slug": "create-index",
+      "tests_hash": "917955396018"
+    },
+    {
+      "slug": "multi-col-where",
+      "tests_hash": "b7d803505762"
+    },
+    {
+      "slug": "query-planner-cost",
+      "tests_hash": "1f60a0411f01"
+    },
+    {
+      "slug": "order-by-limit",
+      "tests_hash": "9fca16a2cdce"
+    },
+    {
+      "slug": "aggregates",
+      "tests_hash": "21561f41bcce"
+    },
+    {
+      "slug": "group-by-having",
+      "tests_hash": "dcc9fd5fe3dc"
+    },
+    {
+      "slug": "join-algorithms",
+      "tests_hash": "64d0ba7875ab"
+    }
+  ]
+}

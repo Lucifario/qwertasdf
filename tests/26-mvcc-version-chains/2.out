@@ -1,0 +1,9 @@
+BEGIN t1 snapshot=0
+OK
+BEGIN t2 snapshot=0
+COMMIT t1 ts=1
+NULL
+COMMIT t2 read-only
+BEGIN t3 snapshot=1
+A
+COMMIT t3 read-only

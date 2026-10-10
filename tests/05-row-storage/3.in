@@ -1,0 +1,4 @@
+CREATE TABLE t (a TEXT, b TEXT)
+INSERT INTO t VALUES ('p', 'q')
+SELECT rowid, * FROM t
+SELECT * FROM t

@@ -1,0 +1,7 @@
+GRANTED t1 a X
+GRANTED t2 b X
+WAIT t1 b X blocked-by=t2
+DEADLOCK t2 released=1
+UNBLOCKED t1 b X
+a mode=X holders=t1 queue=-
+b mode=X holders=t1 queue=-

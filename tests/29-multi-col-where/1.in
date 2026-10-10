@@ -1,0 +1,8 @@
+CREATE TABLE u (id INTEGER, name TEXT, age INTEGER)
+CREATE INDEX idx_name ON u (name)
+INSERT INTO u VALUES (1, 'Alice', 30)
+INSERT INTO u VALUES (2, 'Bob', 25)
+INSERT INTO u VALUES (3, 'Alice', 19)
+.explain SELECT * FROM u WHERE name = 'Alice' AND age > 20
+SELECT id FROM u WHERE name = 'Alice' AND age > 20
+.examined

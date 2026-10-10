@@ -1,0 +1,4 @@
+CREATE TABLE empty (x INTEGER)
+.count empty
+.explain SELECT * FROM empty
+.examined

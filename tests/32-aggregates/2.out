@@ -1,0 +1,8 @@
+OK
+OK
+OK
+OK
+COUNT(*)|COUNT(age)|AVG(age)
+3|2|27.50
+COUNT(id)|SUM(age)|MIN(age)|MAX(age)
+3|55|25|30

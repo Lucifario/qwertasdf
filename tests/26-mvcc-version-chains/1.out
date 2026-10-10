@@ -1,0 +1,6 @@
+BEGIN t1 snapshot=0
+OK
+A
+COMMIT t1 ts=1
+1:A
+ERR no such transaction: t1

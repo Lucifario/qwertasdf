@@ -1,0 +1,6 @@
+BEGIN t1
+WRITE t1 x A
+READ t1 x
+COMMIT t1
+DUMP x
+READ t1 x

@@ -1,0 +1,7 @@
+SET k v
+CRASH
+DUMP
+GET k
+SET z 1
+REPLAY
+DUMP

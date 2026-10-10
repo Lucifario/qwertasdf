@@ -1,0 +1,9 @@
+OK pages=2
+OK pages=2
+OK freed=2
+keys=1 pages=4 free=2
+OK pages=2
+1 -> 2
+OK pages=1
+5
+keys=3 pages=5 free=0

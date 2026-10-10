@@ -1,0 +1,4 @@
+STATS users 1000
+INDEX users id
+QUERY SELECT * FROM users WHERE id = 5
+QUERY SELECT * FROM users WHERE name = 'Ann'

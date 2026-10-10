@@ -1,0 +1,14 @@
+OK txid=1
+OK
+OK
+OK txid=2
+OK
+OK
+CRASHED
+ERR database is down: RECOVER first
+OK committed=1 ignored=1 torn=0
+a=1
+1 SET a 1
+1 COMMIT
+2 SET a 99
+2 SET b 2

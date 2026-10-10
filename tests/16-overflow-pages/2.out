@@ -1,0 +1,6 @@
+OK pages=3
+1 -> 2 -> 3
+The quick brown fox jumps over the lazy dog
+next=2 data="k brown fox jump"
+next=0 data="dog"
+keys=1 pages=3 free=0

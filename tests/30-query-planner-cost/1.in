@@ -1,0 +1,2 @@
+STATS users 1000
+QUERY SELECT * FROM users

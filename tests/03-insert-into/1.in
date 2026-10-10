@@ -1,0 +1,4 @@
+CREATE TABLE users (id INTEGER, name TEXT)
+INSERT INTO users VALUES (1, 'Alice')
+INSERT INTO users VALUES (2, 'Bob')
+.dump users

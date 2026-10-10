@@ -1,0 +1,11 @@
+TABLE L k,a
+ROW L b|1
+ROW L a|2
+ROW L b|3
+TABLE R k,b
+ROW R a|x
+ROW R b|y
+ROW R b|z
+JOIN NL L.k = R.k
+JOIN HASH L.k = R.k
+JOIN SMJ L.k = R.k

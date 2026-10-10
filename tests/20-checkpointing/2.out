@@ -1,0 +1,12 @@
+OK
+OK checkpoint lsn=1 keys=1
+OK
+OK
+2 SET b bced1ecb 2
+3 SET c dd535029 3
+OK
+OK recovered=2 discarded=0
+a=1
+b=2
+c=3
+lsn=3 log=2 checkpoint=1

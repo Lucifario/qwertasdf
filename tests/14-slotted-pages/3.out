@@ -1,0 +1,9 @@
+OK
+slot=0
+slot=1
+OK
+slots=2 live=1 free=4 holes=10
+ERR page full
+OK reclaimed=10
+slot=0
+slots=2 live=2 free=0 holes=0

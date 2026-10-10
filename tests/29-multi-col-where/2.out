@@ -1,0 +1,10 @@
+OK
+OK
+OK
+OK
+OK
+SEARCH TABLE u USING INDEX idx_age (age=30) FILTER (name='A')
+SEARCH TABLE u USING INDEX idx_age (age=30) FILTER (name='A')
+id
+1
+2

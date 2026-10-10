@@ -1,0 +1,8 @@
+LOCK t1 users S
+LOCK t2 users S
+STATUS users
+LOCK t3 users X
+STATUS users
+RELEASE t1
+RELEASE t2
+STATUS users

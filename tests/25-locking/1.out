@@ -1,0 +1,9 @@
+GRANTED t1 users S
+GRANTED t2 users S
+users mode=S holders=t1,t2 queue=-
+WAIT t3 users X blocked-by=t1,t2
+users mode=S holders=t1,t2 queue=t3:X
+OK released=1
+OK released=1
+UNBLOCKED t3 users X
+users mode=X holders=t3 queue=-

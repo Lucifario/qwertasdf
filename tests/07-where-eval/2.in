@@ -1,0 +1,6 @@
+CREATE TABLE u (id INTEGER, name TEXT, age INTEGER)
+INSERT INTO u VALUES (1, 'Alice', 25)
+INSERT INTO u VALUES (2, 'Bob', 35)
+INSERT INTO u VALUES (3, 'Charlie', 28)
+INSERT INTO u VALUES (4, 'Dana', 50)
+SELECT name FROM u WHERE (age > 20 AND age < 30) OR name = 'Bob'

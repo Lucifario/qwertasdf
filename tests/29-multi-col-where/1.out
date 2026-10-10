@@ -1,0 +1,9 @@
+OK
+OK
+OK
+OK
+OK
+SEARCH TABLE u USING INDEX idx_name (name='Alice') FILTER (age>20)
+id
+1
+2

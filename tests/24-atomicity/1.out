@@ -1,0 +1,9 @@
+OK txid=1
+OK
+OK
+OK
+a=1
+b=2
+1 SET a 1
+1 SET b 2
+1 COMMIT

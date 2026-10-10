@@ -1,0 +1,12 @@
+OK
+OK
+OK
+OK
+OK
+durable=3 buffered=1 fsyncs=1
+OK
+OK recovered=3 discarded=0
+a=1
+b=2
+c=3
+durable=3 buffered=0 fsyncs=1

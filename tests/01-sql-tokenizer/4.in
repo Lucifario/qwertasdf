@@ -1,0 +1,2 @@
+SELECT -5 + 3 * 2 / x FROM t
+UPDATE t SET x = 0 WHERE y IS NOT NULL

@@ -1,0 +1,7 @@
+OK
+OK
+OK
+OK
+SEARCH TABLE users USING INDEX (rowid=2)
+SCAN TABLE users
+SCAN TABLE users

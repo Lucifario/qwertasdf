@@ -1,0 +1,7 @@
+GRANTED a r S
+GRANTED a r X
+WAIT b r S blocked-by=a
+r mode=X holders=a queue=b:S
+OK
+UNBLOCKED b r S
+r mode=S holders=b queue=-

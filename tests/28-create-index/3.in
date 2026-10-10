@@ -1,0 +1,11 @@
+CREATE TABLE t (k TEXT, v INTEGER)
+INSERT INTO t VALUES ('a', 1)
+INSERT INTO t VALUES ('b', 2)
+INSERT INTO t VALUES ('a', 3)
+CREATE INDEX idx_k ON t (k)
+UPDATE t SET k = 'b' WHERE v = 1
+DELETE FROM t WHERE v = 2
+INSERT INTO t VALUES ('b', 4)
+SELECT v FROM t WHERE k = 'a'
+SELECT v FROM t WHERE k = 'b'
+.examined

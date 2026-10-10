@@ -1,0 +1,4 @@
+OK
+OK
+IndexScan(users, idx_id)  COST=13
+SeqScan(users) Filter(name='Ann')  COST=1000

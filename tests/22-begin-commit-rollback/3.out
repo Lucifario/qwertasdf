@@ -1,0 +1,6 @@
+OK
+ERR transaction already active
+OK
+ERR no active transaction
+ERR no active transaction
+txn=no undo=0 savepoints=-

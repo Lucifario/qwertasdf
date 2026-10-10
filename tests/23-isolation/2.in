@@ -1,0 +1,9 @@
+A SET bal 100
+LEVEL repeatable-read
+R BEGIN
+R GET bal
+A SET bal 150
+R GET bal
+A GET bal
+R COMMIT
+R GET bal

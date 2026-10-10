@@ -1,0 +1,8 @@
+CREATE TABLE t (id INTEGER, k TEXT)
+INSERT INTO t VALUES (1, 'x')
+INSERT INTO t VALUES (2, 'y')
+.explain SELECT * FROM t WHERE id = 1 AND k = 'x'
+.explain SELECT * FROM t WHERE id = 1
+.explain SELECT * FROM t
+SELECT * FROM t WHERE id = 1 AND k = 'x'
+.examined

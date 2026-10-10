@@ -1,0 +1,7 @@
+A SET bal 100
+R BEGIN
+R GET bal
+A SET bal 150
+R GET bal
+R COMMIT
+R GET bal

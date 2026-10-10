@@ -1,0 +1,5 @@
+CREATE TABLE t (x INTEGER, s TEXT)
+INSERT INTO t VALUES ('a', 'b')
+INSERT INTO t VALUES (7, 'ok')
+INSERT INTO t VALUES (8, 9)
+.dump t

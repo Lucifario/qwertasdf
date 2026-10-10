@@ -1,0 +1,5 @@
+OK
+OK
+durable=2 buffered=0 fsyncs=2
+1 SET a 1e2fcded 1
+2 SET b bced1ecb 2

@@ -1,0 +1,7 @@
+A SET x 1
+A BEGIN
+A SET x 2
+B GET x
+A COMMIT
+B GET x
+DUMP

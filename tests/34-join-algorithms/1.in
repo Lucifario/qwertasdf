@@ -1,0 +1,9 @@
+TABLE A id,name
+ROW A 1|alice
+ROW A 2|bob
+ROW A 3|cara
+TABLE B aid,score
+ROW B 1|99
+ROW B 2|88
+ROW B 9|77
+JOIN NL A.id = B.aid

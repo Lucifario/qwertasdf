@@ -1,0 +1,6 @@
+LOCK t1 a X
+LOCK t2 b X
+LOCK t1 b X
+LOCK t2 a X
+STATUS a
+STATUS b

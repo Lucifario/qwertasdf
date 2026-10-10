@@ -1,0 +1,9 @@
+OK
+OK
+OK
+SCAN TABLE t FILTER (id=1 AND k='x')
+SCAN TABLE t FILTER (id=1)
+SCAN TABLE t
+id|k
+1|x
+2

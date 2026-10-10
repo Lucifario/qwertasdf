@@ -1,0 +1,6 @@
+TABLE s region,amount
+ROW s us|100
+ROW s us|200
+ROW s eu|400
+QUERY SELECT region,SUM(amount),AVG(amount) FROM s GROUP BY region
+QUERY SELECT region, MIN(amount), MAX(amount) FROM s GROUP BY region

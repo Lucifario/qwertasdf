@@ -1,0 +1,8 @@
+SET name Alice
+SET city New York
+DEL name
+DEL name
+LOG
+DUMP
+GET city
+GET name

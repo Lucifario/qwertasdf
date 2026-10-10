@@ -1,0 +1,13 @@
+CREATE TABLE t (x INTEGER)
+CREATE INDEX idx_x ON t (x)
+INSERT INTO t VALUES (5)
+INSERT INTO t VALUES (3)
+INSERT INTO t VALUES (5)
+INSERT INTO t VALUES (9)
+SELECT rowid, x FROM t WHERE x = 5
+.examined
+SELECT rowid, x FROM t WHERE x = 4
+.examined
+.explain SELECT * FROM t WHERE x = 4
+SELECT x FROM t WHERE x > 4
+.examined

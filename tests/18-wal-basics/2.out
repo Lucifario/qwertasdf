@@ -1,0 +1,10 @@
+OK
+OK
+OK
+NOT_FOUND
+1 SET name 8a345f3e Alice
+2 SET city 9354d180 New York
+3 DEL name 8f9c161e
+city=New York
+New York
+NOT_FOUND

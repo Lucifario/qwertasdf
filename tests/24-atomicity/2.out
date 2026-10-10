@@ -1,0 +1,13 @@
+OK txid=1
+OK
+OK
+OK txid=2
+OK
+OK
+OK
+a=1
+1 SET a 1
+1 COMMIT
+2 SET a 2
+2 SET c 3
+2 ABORT

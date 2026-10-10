@@ -1,0 +1,6 @@
+region|SUM(amount)|AVG(amount)
+eu|400|400.00
+us|300|150.00
+region|MIN(amount)|MAX(amount)
+eu|400|400
+us|100|200

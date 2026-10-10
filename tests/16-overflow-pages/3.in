@@ -1,0 +1,9 @@
+STORE a aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+STORE b bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+DROP a
+STATS
+STORE c cccccccccccccccccccccccccccccc
+CHAIN c
+STORE d dddddddddddddddddddd
+CHAIN d
+STATS

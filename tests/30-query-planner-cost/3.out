@@ -1,0 +1,5 @@
+OK
+OK
+IndexScan(o, idx_uid) Filter(status='paid')  COST=14.02
+IndexScan(o, idx_uid) Filter(status='paid')  COST=14.02
+SeqScan(o) Filter(status='paid')  COST=1024

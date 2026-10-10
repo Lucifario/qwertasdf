@@ -1,0 +1,5 @@
+TABLE sales region,amount
+ROW sales us|100
+ROW sales us|200
+ROW sales eu|150
+QUERY SELECT region,COUNT(*) FROM sales GROUP BY region

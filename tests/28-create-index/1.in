@@ -1,0 +1,9 @@
+CREATE TABLE users (id INTEGER, name TEXT)
+INSERT INTO users VALUES (1, 'Alice')
+INSERT INTO users VALUES (2, 'Bob')
+INSERT INTO users VALUES (3, 'Alice')
+CREATE INDEX idx_name ON users (name)
+.indexes
+.explain SELECT * FROM users WHERE name = 'Alice'
+SELECT id FROM users WHERE name = 'Alice'
+.examined

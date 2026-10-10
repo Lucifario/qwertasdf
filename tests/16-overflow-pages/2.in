@@ -1,0 +1,6 @@
+STORE fox The quick brown fox jumps over the lazy dog
+CHAIN fox
+GET fox
+PAGE 1
+PAGE 3
+STATS

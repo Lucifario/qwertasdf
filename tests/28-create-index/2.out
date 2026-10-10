@@ -1,0 +1,18 @@
+OK
+OK
+OK
+OK
+OK
+OK
+rowid|x
+1|5
+3|5
+2
+rowid|x
+0
+SEARCH TABLE t USING INDEX idx_x (x=4)
+x
+5
+5
+9
+4

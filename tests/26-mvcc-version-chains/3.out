@@ -1,0 +1,11 @@
+BEGIN t1 snapshot=0
+OK
+COMMIT t1 ts=1
+BEGIN t2 snapshot=1
+OK
+1:A -> pending(t2):B
+B
+BEGIN t3 snapshot=1
+A
+ABORT t2
+1:A

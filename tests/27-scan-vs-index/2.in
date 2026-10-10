@@ -1,0 +1,10 @@
+CREATE TABLE users (id INTEGER, name TEXT)
+INSERT INTO users VALUES (10, 'Ann')
+INSERT INTO users VALUES (20, 'Bob')
+INSERT INTO users VALUES (30, 'Cy')
+SELECT * FROM users WHERE rowid = 2
+.examined
+SELECT * FROM users WHERE id = 20
+.examined
+SELECT name FROM users WHERE rowid = 9
+.examined

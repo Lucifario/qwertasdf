@@ -1,0 +1,5 @@
+STATS o 1024
+INDEX o uid
+QUERY SELECT * FROM o WHERE uid = 7 AND status = 'paid'
+QUERY SELECT * FROM o WHERE status = 'paid' AND uid = 7
+QUERY SELECT * FROM o WHERE status = 'paid'

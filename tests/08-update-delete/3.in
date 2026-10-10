@@ -1,0 +1,5 @@
+CREATE TABLE u (id INTEGER, name TEXT, age INTEGER)
+INSERT INTO u VALUES (1, 'Alice', 25)
+INSERT INTO u VALUES (2, 'Bob', 30)
+UPDATE u SET name = 'AA', age = 99 WHERE id = 1
+SELECT * FROM u

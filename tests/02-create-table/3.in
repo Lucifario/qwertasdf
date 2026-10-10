@@ -1,0 +1,3 @@
+CREATE TABLE t (x INTEGER)
+CREATE TABLE t (y TEXT)
+.schema t

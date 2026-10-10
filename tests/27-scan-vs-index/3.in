@@ -1,0 +1,13 @@
+CREATE TABLE t (v TEXT)
+INSERT INTO t VALUES ('a')
+INSERT INTO t VALUES ('b')
+INSERT INTO t VALUES ('c')
+DELETE FROM t WHERE v = 'b'
+SELECT rowid, v FROM t WHERE rowid = 2
+.examined
+SELECT rowid, v FROM t WHERE rowid = 3
+.examined
+INSERT INTO t VALUES ('d')
+SELECT rowid, v FROM t WHERE rowid = 4
+.examined
+.explain SELECT * FROM t WHERE rowid = 2

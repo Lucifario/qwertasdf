@@ -1,0 +1,15 @@
+OK
+OK
+OK
+OK
+OK 1
+rowid|v
+0
+rowid|v
+3|c
+1
+OK
+rowid|v
+4|d
+1
+SEARCH TABLE t USING INDEX (rowid=2)

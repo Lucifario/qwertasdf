@@ -1,0 +1,13 @@
+OK
+OK
+OK
+OK
+1 SET a 1e2fcded 1
+2 SET b bced1ecb 2
+3 SET c dd5350
+OK
+OK recovered=2 discarded=1
+a=1
+b=2
+1 SET a 1e2fcded 1
+2 SET b bced1ecb 2
